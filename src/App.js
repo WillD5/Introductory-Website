@@ -1,17 +1,24 @@
-import './App.css';
+import "./App.css";
+import Header from "./Components/Header.tsx";
+import Footer from "./Components/Footer.tsx";
+import Pro from "./Pages/Pro.tsx";
+import Main from "./Pages/Main.tsx";
+import Unexisting from "./Pages/404.tsx";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h3> My Header</h3>
-      </header>
-      <body className="body">
-        <h1> Hello, World! </h1>
-      </body>
-      <footer className="footer">
-        <p> This is a footer </p>
-      </footer>
+      <Header />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Pro />} />
+          <Route path="/pro" element={<Pro />} />
+          <Route path="/main" element={<Main />} />
+          <Route path="*" element={<Unexisting />} />
+        </Routes>
+      </Router>
+      <Footer />
     </div>
   );
 }
