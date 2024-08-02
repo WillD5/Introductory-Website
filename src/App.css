@@ -3,12 +3,6 @@
   background-color: #282c34;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  /*.App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }*/
-}
-
 .App-header {
   display: flex;
   flex-direction: column;
@@ -18,25 +12,27 @@
   color: white;
 }
 
-.body{
+.body {
   min-height: 50vh;
 }
 
-.footer{
+.footer {
   background-color: #282c34;
   height: 10vh;
-
 }
 
-.App-link {
-  color: #61dafb;
+.linkItem {
+  list-style-type: none;
+  padding-bottom: 1.5%;
 }
 
-/*@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}*/
+.list {
+  position: relative;
+  right: 1%;
+}
+
+.paragraph {
+  max-width: 50%;
+  display: flex;
+  margin: 0 auto;
+}
